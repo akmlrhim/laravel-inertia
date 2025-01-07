@@ -133,7 +133,10 @@ export default function Index({ auth, projects, queryParams = null }) {
                   </thead>
                   <tbody>
                     {projects.data.map((project, index) => (
-                      <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                      <tr
+                        className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                        key={project.id}
+                      >
                         <td className="px-3 py-2">{index + 1}</td>
                         <td className="px-3 py-2">
                           <img
